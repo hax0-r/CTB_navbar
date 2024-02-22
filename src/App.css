@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  /* position: fixed;
+  top: 0;
+  right: 0; */
+  width: 100%;
+
+  .main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(128, 128, 128, 0.336);
+
+    .bar,
+    .pho {
+      display: none;
+    }
+
+    .left {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        li {
+          list-style: none;
+          padding: 1rem;
+        }
+
+        .hover {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+
+          ul {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            width: 7rem;
+            background-color: rgba(128, 128, 128, 0.336);
+            height: 0rem;
+            overflow: hidden;
+            transition: 200ms all;
+          }
+
+          &:hover {
+            ul {
+              height: 10rem;
+            }
+          }
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+
+  .mobile {
+    height: 0;
+    overflow: hidden;
+  }
+}
+
+@media (max-width:768px) {
+  nav {
+
+    .main {
+
+      .bar,
+      .pho {
+        display: block;
+      }
+
+      .left {
+        ul {
+          display: none;
+        }
+      }
+
+      .right {
+        display: none;
+      }
+
+    }
+
+    .mobile {
+      height: 0rem;
+      overflow: hidden;
+      background-color: pink;
+      display: flex;
+      align-items: center;
+      transition: 300ms all;
+
+      .drop {
+        ul {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+
+          li {
+            list-style: none;
+            padding: 1rem;
+          }
+
+          div {
+            li{
+              button{
+                cursor: pointer;
+                width: 30px;
+                height: 30px;
+              }
+            }
+            ul {
+              background-color: antiquewhite;
+              height: 0rem;
+              overflow: hidden;
+              transition: 300ms all;
+            }
+            .heightdrop{
+              height: 10rem;
+            }
+          }
+
+        }
+      }
+    }
+
+    .height {
+      height: 20rem;
+    }
+    .heightMax {
+      height: 30rem;
+    }
+  }
+}
